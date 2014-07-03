@@ -3,7 +3,7 @@ package ca.uwaterloo.comsec.euler.solutions.P469;
 public class P469EmptyChairs {
 	
 	public static void solve() {
-		
+		long value = 1000000000000000000l;
 	}
 
 	/**
