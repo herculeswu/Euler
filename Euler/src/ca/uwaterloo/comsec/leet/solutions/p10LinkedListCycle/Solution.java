@@ -6,12 +6,19 @@ public class Solution {
     public ListNode detectCycle(ListNode head) {
         ListNode p0, p1, p2, tmp;
 		boolean isCycle = false;
+		int n = 0;
 		p0 = head;
 		p1 = head;
 		p2 = head;
 		
 		while(p1 != null && p2 != null) {
-			
+			if(p1 == p2) {
+				while(p0 != p1) {
+					p0 = p0.next;
+					p1 = p1.next;
+				}
+				return p0;
+			}
 			p1 = p1.next;
 			tmp = p2.next;
 			if(tmp == null)
